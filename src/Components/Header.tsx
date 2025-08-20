@@ -18,27 +18,27 @@ export function Header() {
       link: "/bids",
     },
     {
-      name: "Listings",
-      link: "/listing",
+      name: "List",
+      link: "/getbiddings",
     },
     {
-      name: "Contact",
-      link: "/contact",
+      name: "Purchase",
+      link: "/bid",
     },
   ];
 
   const mobileNavItems = [
     {
-      name: "Features",
-      link: "/features",
+      name: "Biddings",
+      link: "/bids",
     },
     {
-      name: "Pricing",
-      link: "/pricing",
+      name: "List",
+      link: "/getbiddings",
     },
     {
-      name: "Contact",
-      link: "/contact",
+      name: "Purchase",
+      link: "/bid",
     },
     {
       name: "Login",
@@ -55,8 +55,9 @@ export function Header() {
         <NavbarLogo />
         <NavItems items={navItems} />
         <div className="flex items-center gap-4">
-          <NavbarButton variant="secondary">
-            <NavItems items={[{ name: "Login", link: "/login" }]} />
+          {/* Replace nested anchor with direct NavbarButton usage */}
+          <NavbarButton variant="secondary" href="/login">
+            Login
           </NavbarButton>
         </div>
       </NavBody>

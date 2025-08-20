@@ -7,7 +7,7 @@ async function getData(): Promise<Bids[]> {
     next: { revalidate: 60 },
   });
   try {
-    const data = await res.json();
+    const data: Bids[] = await res.json();
     if (data.length < 1)
       return [
         {
